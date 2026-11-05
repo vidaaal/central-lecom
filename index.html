@@ -22,14 +22,16 @@
     <nav class="nav">
       <a href="#inicio" class="nav-item home">Visão geral</a>
       <div class="nav-label">Coleções</div>
-      <a href="#cat-workspace" class="nav-item" data-cat="workspace"><span class="nav-num">01</span>Workspace</a>
-      <a href="#cat-studio" class="nav-item" data-cat="studio"><span class="nav-num">02</span>Studio e BPMN</a>
-      <a href="#cat-formularios" class="nav-item" data-cat="formularios"><span class="nav-num">03</span>Formulários e regras</a>
-      <a href="#cat-publicacao" class="nav-item" data-cat="publicacao"><span class="nav-num">04</span>Publicação e acesso</a>
-      <a href="#cat-analises" class="nav-item" data-cat="analises"><span class="nav-num">05</span>Análises e auditoria</a>
-      <a href="#cat-documentos" class="nav-item" data-cat="documentos"><span class="nav-num">06</span>Documentos e ECM</a>
-      <a href="#cat-automacao" class="nav-item" data-cat="automacao"><span class="nav-num">07</span>Serviços e integrações</a>
-      <a href="#cat-suporte" class="nav-item" data-cat="suporte"><span class="nav-num">08</span>Suporte e governança</a>
+      <a href="#cat-visao-geral" class="nav-item" data-cat="visao-geral"><span class="nav-num">01</span>Comece aqui</a>
+      <a href="#cat-padroes-bpmn" class="nav-item" data-cat="padroes-bpmn"><span class="nav-num">02</span>Padrões da área BPMN</a>
+      <a href="#cat-workspace" class="nav-item" data-cat="workspace"><span class="nav-num">03</span>Workspace</a>
+      <a href="#cat-studio" class="nav-item" data-cat="studio"><span class="nav-num">04</span>Studio e BPMN</a>
+      <a href="#cat-formularios" class="nav-item" data-cat="formularios"><span class="nav-num">05</span>Formulários e regras</a>
+      <a href="#cat-publicacao" class="nav-item" data-cat="publicacao"><span class="nav-num">06</span>Publicação e acesso</a>
+      <a href="#cat-analises" class="nav-item" data-cat="analises"><span class="nav-num">07</span>Análises e auditoria</a>
+      <a href="#cat-documentos" class="nav-item" data-cat="documentos"><span class="nav-num">08</span>Documentos e ECM</a>
+      <a href="#cat-automacao" class="nav-item" data-cat="automacao"><span class="nav-num">09</span>Serviços e integrações</a>
+      <a href="#cat-suporte" class="nav-item" data-cat="suporte"><span class="nav-num">10</span>Suporte e governança</a>
     </nav>
     <div class="sidebar-footer">
       <span class="status-dot"></span>
@@ -61,8 +63,8 @@
         <h1>Central de conhecimento LECOM</h1>
         <p class="lead">Como executar atividades no Workspace, desenhar no Studio, validar formulários e investigar problemas — com cuidados para versão, perfil e ambiente.</p>
         <div class="hero-stats">
-          <div><strong>15</strong> guias práticos</div>
-          <div><strong>8</strong> áreas LECOM</div>
+          <div><strong id="article-total">15</strong> guias práticos</div>
+          <div><strong id="category-total">10</strong> áreas de consulta</div>
           <div><strong>5.70</strong> referência operacional</div>
         </div>
         <p class="article-meta">Referências operacionais 5.70 e API de formulário 5.50; confirme a versão do ambiente da empresa antes de seguir instruções específicas.</p>
@@ -72,6 +74,8 @@
       <div class="toolbar" id="biblioteca">
         <div class="chips" id="chips">
           <button class="chip active" data-filter="all">Tudo</button>
+          <button class="chip" data-filter="visao-geral">Comece aqui</button>
+          <button class="chip" data-filter="padroes-bpmn">Padrões da área</button>
           <button class="chip" data-filter="workspace">Workspace</button>
           <button class="chip" data-filter="studio">Studio e BPMN</button>
           <button class="chip" data-filter="formularios">Formulários</button>
