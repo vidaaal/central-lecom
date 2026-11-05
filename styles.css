@@ -235,6 +235,7 @@ body {
 
 .search-wrap {
   flex: 1;
+  min-width: 0;
   max-width: 420px;
   position: relative;
   display: flex;
@@ -440,6 +441,21 @@ main {
   letter-spacing: -.01em;
 }
 
+.card-body pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: .8rem;
+  margin: .75rem 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  font: .85rem/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.card-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
 .group-title span {
   font-size: .75rem;
   font-weight: 600;
@@ -475,6 +491,15 @@ main {
 .card summary::-webkit-details-marker { display: none; }
 
 .card summary:hover { background: var(--hover); }
+
+.card summary:focus-visible,
+.icon-btn:focus-visible,
+.btn-text:focus-visible,
+.chip:focus-visible,
+.tool-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 
 .card[open] summary {
   border-bottom: 1px solid var(--border);
@@ -588,7 +613,10 @@ main {
 }
 
 .card-body table {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
   border-collapse: collapse;
   margin: .75rem 0;
   font-size: .875rem;
@@ -668,6 +696,19 @@ main {
 }
 
 @media (max-width: 480px) {
+  .topbar {
+    gap: .45rem;
+    padding-inline: .75rem;
+  }
+
+  .top-actions {
+    gap: .15rem;
+  }
+
+  .top-actions .btn-text {
+    padding-inline: .5rem;
+  }
+
   .hero-stats { gap: 1rem; }
   .card summary { padding: .75rem .85rem; }
   .card-body { padding: 1rem; }
