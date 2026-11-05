@@ -1,6 +1,7 @@
 const root = document.documentElement;
 const searchInput = document.querySelector("#search");
 const articles = [...document.querySelectorAll("[data-article]")];
+const knownArticleIds = new Set(articles.map((article) => article.id));
 const groups = [...document.querySelectorAll("[data-group]")];
 const chips = [...document.querySelectorAll("[data-filter]")];
 const navItems = [...document.querySelectorAll(".nav-item[data-cat]")];
@@ -22,7 +23,11 @@ let toastTimer;
 
 function readFavorites() {
   try {
-    return new Set(JSON.parse(localStorage.getItem(favoritesKey) || "[]"));
+    return new Set(
+      JSON.parse(localStorage.getItem(favoritesKey) || "[]").filter((id) =>
+        knownArticleIds.has(id),
+      ),
+    );
   } catch {
     return new Set();
   }

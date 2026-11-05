@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Central de conhecimento LECOM: guias, processos, soluções e referências internas.">
+<meta name="description" content="Central prática para operar, modelar, configurar e manter processos na plataforma LECOM.">
 <title>Central LECOM</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
@@ -22,14 +22,14 @@
     <nav class="nav">
       <a href="#inicio" class="nav-item home">Visão geral</a>
       <div class="nav-label">Coleções</div>
-      <a href="#cat-comece-aqui" class="nav-item" data-cat="comece-aqui"><span class="nav-num">01</span>Comece aqui</a>
-      <a href="#cat-guias-lecom" class="nav-item" data-cat="guias-lecom"><span class="nav-num">02</span>Guias LECOM</a>
-      <a href="#cat-processos" class="nav-item" data-cat="processos"><span class="nav-num">03</span>Processos</a>
-      <a href="#cat-duvidas-e-solucoes" class="nav-item" data-cat="duvidas-e-solucoes"><span class="nav-num">04</span>Dúvidas e soluções</a>
-      <a href="#cat-reunioes-e-treinamentos" class="nav-item" data-cat="reunioes-e-treinamentos"><span class="nav-num">05</span>Reuniões e treinamentos</a>
-      <a href="#cat-glossario" class="nav-item" data-cat="glossario"><span class="nav-num">06</span>Glossário</a>
-      <a href="#cat-melhorias-e-ideias" class="nav-item" data-cat="melhorias-e-ideias"><span class="nav-num">07</span>Melhorias e ideias</a>
-      <a href="#cat-links-uteis" class="nav-item" data-cat="links-uteis"><span class="nav-num">08</span>Links úteis</a>
+      <a href="#cat-workspace" class="nav-item" data-cat="workspace"><span class="nav-num">01</span>Workspace</a>
+      <a href="#cat-studio" class="nav-item" data-cat="studio"><span class="nav-num">02</span>Studio e BPMN</a>
+      <a href="#cat-formularios" class="nav-item" data-cat="formularios"><span class="nav-num">03</span>Formulários e regras</a>
+      <a href="#cat-publicacao" class="nav-item" data-cat="publicacao"><span class="nav-num">04</span>Publicação e acesso</a>
+      <a href="#cat-analises" class="nav-item" data-cat="analises"><span class="nav-num">05</span>Análises e auditoria</a>
+      <a href="#cat-documentos" class="nav-item" data-cat="documentos"><span class="nav-num">06</span>Documentos e ECM</a>
+      <a href="#cat-automacao" class="nav-item" data-cat="automacao"><span class="nav-num">07</span>Roberty e integrações</a>
+      <a href="#cat-suporte" class="nav-item" data-cat="suporte"><span class="nav-num">08</span>Suporte e governança</a>
     </nav>
     <div class="sidebar-footer">
       <span class="status-dot"></span>
@@ -57,30 +57,31 @@
     <main>
       <!-- Hero / overview -->
       <section class="hero" id="inicio">
-        <p class="eyebrow">Playbook interno</p>
+        <p class="eyebrow">Base operacional · processos digitais</p>
         <h1>Central de conhecimento LECOM</h1>
-        <p class="lead">Guias, processos, dúvidas e referências em um só lugar. Feito para consultar rápido e aprender com clareza.</p>
+        <p class="lead">Como executar atividades no Workspace, desenhar no Studio, validar formulários e investigar problemas — com cuidados para versão, perfil e ambiente.</p>
         <div class="hero-stats">
-          <div><strong>14</strong> páginas</div>
-          <div><strong>8</strong> coleções</div>
-          <div><strong>Offline</strong> disponível</div>
+          <div><strong>16</strong> guias práticos</div>
+          <div><strong>8</strong> áreas LECOM</div>
+          <div><strong>5.70</strong> referência operacional</div>
         </div>
+        <p class="article-meta">Referências operacionais 5.70 e API de formulário 5.50; confirme a versão do ambiente da empresa antes de seguir instruções específicas.</p>
       </section>
 
       <!-- Filters -->
       <div class="toolbar" id="biblioteca">
         <div class="chips" id="chips">
           <button class="chip active" data-filter="all">Tudo</button>
-          <button class="chip" data-filter="comece-aqui">Comece aqui</button>
-          <button class="chip" data-filter="guias-lecom">Guias LECOM</button>
-          <button class="chip" data-filter="processos">Processos</button>
-          <button class="chip" data-filter="duvidas-e-solucoes">Dúvidas e soluções</button>
-          <button class="chip" data-filter="reunioes-e-treinamentos">Reuniões e treinamentos</button>
-          <button class="chip" data-filter="glossario">Glossário</button>
-          <button class="chip" data-filter="melhorias-e-ideias">Melhorias e ideias</button>
-          <button class="chip" data-filter="links-uteis">Links úteis</button>
+          <button class="chip" data-filter="workspace">Workspace</button>
+          <button class="chip" data-filter="studio">Studio e BPMN</button>
+          <button class="chip" data-filter="formularios">Formulários</button>
+          <button class="chip" data-filter="publicacao">Publicação e acesso</button>
+          <button class="chip" data-filter="analises">Análises</button>
+          <button class="chip" data-filter="documentos">Documentos e ECM</button>
+          <button class="chip" data-filter="automacao">Roberty e integrações</button>
+          <button class="chip" data-filter="suporte">Suporte e governança</button>
         </div>
-        <span class="results" id="results-count">14 páginas</span>
+        <span class="results" id="results-count">16 páginas</span>
       </div>
 
       <div id="empty" class="empty" hidden>
@@ -89,7 +90,7 @@
         <button id="clear-filters" class="btn-text">Limpar busca e filtros</button>
       </div>
 
-      <!-- Articles by category -->
+      <!-- Conteúdo LECOM renderizado a partir de knowledge.js -->
       <section class="group" id="cat-comece-aqui" data-group="comece-aqui">
         <h2 class="group-title"><span>01</span> Comece aqui</h2>
         <details class="card" id="comece-por-aqui-central-lecom" data-article data-category="comece-aqui">
@@ -344,6 +345,7 @@
 </div>
 
 <div id="toast" class="toast" role="status"></div>
+<script src="knowledge.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

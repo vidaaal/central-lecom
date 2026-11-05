@@ -1,6 +1,10 @@
 # Central LECOM
 
-Site estático de conhecimento para consulta de guias, processos, dúvidas e referências LECOM.
+Site estático de referência prática para Workspace, Studio, BPMN, formulários, publicação, análises, documentos e automações LECOM.
+
+## Escopo e validação
+
+Os guias operacionais usam como referência documentação LECOM 5.70; o exemplo de JavaScript de formulário é identificado como referência 5.50. Isso não confirma a versão instalada na empresa. Valide versão, ambiente, perfil e configuração locais antes de tratar qualquer orientação como procedimento oficial.
 
 ## Como abrir
 
